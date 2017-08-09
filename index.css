@@ -166,9 +166,12 @@ button:active, button.pressed, .button:active, .button.pressed {
   margin: 1em 0;
   border: 1px solid #bbb;
   max-width: 40em;
+  height: 0%;
+  width: 0%;
+  /*
   height: 16em;
   width: 100%;
-
+  */
   color: rgba(0, 0, 0, 0.9);
 }
 

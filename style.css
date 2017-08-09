@@ -169,13 +169,21 @@ button:active, button.pressed, .button:active, .button.pressed {
   overflow: hidden;
   margin: 1em 0;
   border: 1px solid #bbb;
+  width: 0%;
+  height: 0%;
+  
+  /*
   max-width: 40em;
   height: 16em;
+  */
 
   color: rgba(0, 0, 0, 0.9);
 }
 #out-editor {
+  width: 0%;
+  /*
   width: 100%;
+  */
   padding: 4px;
   overflow: auto;
 }
