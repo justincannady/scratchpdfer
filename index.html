@@ -18,11 +18,13 @@
 <script type="text/javascript" src="http://cdn.uriit.ru/jsPDF/libs/adler32cs.js/adler32cs.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js
 "></script>
+<script type="text/javascript" src="libs/Blob.js/BlobBuilder.js"></script>
 <script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.addimage.js"></script>
 <script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.standard_fonts_metrics.js"></script>
 <script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.split_text_to_size.js"></script>
 <script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.from_html.js"></script>
 
+<div id="target">
 <h1>
   <div id=title>
     <a href="/">scratchblocks</a>
@@ -147,24 +149,7 @@ function myPdfFunction() {
     window.print();
 }
 </script>
-<script>
-$(function () {
-    var specialElementHandlers = {
-        '#editor': function (element,renderer) {
-            return true;
-        }
-    };
- $('#cmd').click(function () {
-        var doc = new jsPDF();
-        doc.fromHTML($('#target').html(), 15, 15, {
-            'width': 170,'elementHandlers': specialElementHandlers
-        });
-        doc.save('sample-file.pdf');
-    });  
-});
-</script>
 
-<button id="cmd">generate PDF</button>
 <!---------------------------------------------------------------------------->
 
 <script src="/scratchpdfer/js/scratchblocks-v3.1-min.js"></script>
@@ -370,3 +355,22 @@ updatedFromHash();
   _gs('GSN-349113-Y');
 </script>
 
+<script>
+$(function () {
+    var specialElementHandlers = {
+        '#editor': function (element,renderer) {
+            return true;
+        }
+    };
+ $('#cmd').click(function () {
+        var doc = new jsPDF();
+        doc.fromHTML($('#target').html(), 15, 15, {
+            'width': 170,'elementHandlers': specialElementHandlers
+        });
+        doc.save('sample-file.pdf');
+    });  
+});
+</script>
+
+<button id="cmd">generate PDF</button>
+</div>
