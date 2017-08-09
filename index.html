@@ -123,7 +123,7 @@
 <pre id="preview" class="blocks"></pre>
 
 <a id="export-svg" class="export-link" download="scratchblocks.svg">Export SVG</a>
-
+<a id="export-png" class="export-link" download="scratchblocks.png">Export PNG</a>
 
 <!---------------------------------------------------------------------------->
 
@@ -281,7 +281,7 @@ function objUpdated() {
 
     // add export link
     setTimeout(function() {
-      exportSVGLink.href = window.print(doc.exportSVG());
+      exportSVGLink.href = doc.exportSVG();
 
       doc.exportPNG(function(pngDataURL) {
         exportPNGLink.href = pngDataURL;
