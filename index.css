@@ -470,7 +470,7 @@ button:active, button.pressed, .button:active, .button.pressed {
   float: left;
   width: 6em;
   height: 6em;
-  border: 1px solid #888;
+  border: 0px solid #888;
 }
 #costume-preview img {
   width: 100%;

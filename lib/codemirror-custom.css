@@ -152,7 +152,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   /* See overflow: hidden in .CodeMirror */
   margin-bottom: -30px; margin-right: -30px;
   padding-bottom: 30px;
-  height: 100%;
+  height: 0%;
   outline: none; /* Prevent dragging from highlighting the element */
   position: relative;
   -moz-box-sizing: content-box;
@@ -196,7 +196,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 }
 .CodeMirror-gutter {
   white-space: normal;
-  height: 100%;
+  height: 0%;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   display: inline-block;
@@ -208,7 +208,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 .CodeMirror-gutter-wrapper {
   position: absolute;
   z-index: 4;
-  height: 100%;
+  height: 0%;
 }
 .CodeMirror-gutter-elt {
   position: absolute;
@@ -311,7 +311,7 @@ span.CodeMirror-selectedtext { background: none; }
 .CodeMirror-fullscreen {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  height: auto;
+  height: 0%;
   z-index: 9;
 }
 
