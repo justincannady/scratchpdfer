@@ -12,20 +12,6 @@
 
 <!---------------------------------------------------------------------------->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.1.135/jspdf.min.js"></script>
-<script type="text/javascript" src="http://cdn.uriit.ru/jsPDF/libs/adler32cs.js/adler32cs.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js
-"></script>
-<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.addimage.js"></script>
-<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.standard_fonts_metrics.js"></script>
-<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.split_text_to_size.js"></script>
-<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.from_html.js"></script>
-<html>
-<body id="target">
-
-  <div id="content">
 
 <h1>
   <div id=title>
@@ -295,7 +281,7 @@ function objUpdated() {
 
     // add export link
     setTimeout(function() {
-      exportSVGLink.href = doc.exportSVG();
+      exportSVGLink.href = window.print(doc.exportSVG());
 
       doc.exportPNG(function(pngDataURL) {
         exportPNGLink.href = pngDataURL;
@@ -343,25 +329,3 @@ updatedFromHash();
 
   _gs('GSN-349113-Y');
 </script>
-
-<script>
-$(function () {
-    var specialElementHandlers = {
-        '#editor': function (element,renderer) {
-            return true;
-        }
-    };
- $('#cmd').click(function () {
-        var doc = new jsPDF();
-        doc.fromHTML($('#target').html(), 15, 15, {
-            'width': 170,'elementHandlers': specialElementHandlers
-        });
-        doc.save('sample-file.pdf');
-    });  
-});
-</script>
-</div>
-<button id="cmd">generate PDF</button>
-
-</body>
-</html>
