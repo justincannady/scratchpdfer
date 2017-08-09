@@ -167,8 +167,8 @@ button:active, button.pressed, .button:active, .button.pressed {
 #editor, #in-editor, #out-editor {
   position: relative;
   overflow: hidden;
-  margin: 1em 0;
-  border: 1px solid #bbb;
+  margin: 0em 0;
+  border: 0px solid #bbb;
   width: 0%;
   height: 0%;
   
@@ -184,7 +184,7 @@ button:active, button.pressed, .button:active, .button.pressed {
   /*
   width: 100%;
   */
-  padding: 4px;
+  padding: 0px;
   overflow: auto;
 }
 
@@ -244,7 +244,7 @@ button:active, button.pressed, .button:active, .button.pressed {
     position: absolute;
     top: 3.25em; bottom: 0; left: 2em; right: 0;
     margin: 0;
-    height: auto;
+    height: 0%;
   }
 
   #side {
