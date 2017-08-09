@@ -121,9 +121,20 @@
 
 <pre id="preview" class="blocks"></pre>
 
+
+var x = document.URL;
 <a id="export-svg" class="export-link" download="scratchblocks.svg">Export SVG</a>
 <a id="export-png" class="export-link" download="scratchblocks.png">Export PNG</a>
-<a href="http://www.web2pdfconvert.com/engine?curl=">Save to PDF</a>
+<a href="http://www.web2pdfconvert.com/engine?curl="+"/">Save to PDF</a>
+
+<button onclick="myPdfFunction()">Save as PDF</button>
+
+<script>
+function myPdfFunction() {
+    var currentUrlPdf = "http://www.web2pdfconvert.com/engine?curl=" + document.URL;
+    window.open(currentUrlPdf);
+}
+</script>
 <!---------------------------------------------------------------------------->
 
 <script src="/scratchpdfer/js/scratchblocks-v3.1-min.js"></script>
